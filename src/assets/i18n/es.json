@@ -1,0 +1,27 @@
+{
+    "NAVBAR": {
+        "whoAreUs": "¿Quienes somos?",
+        "vision": "Visión",
+        "mission": "Misión",
+        "login": "Login",
+        "register": "Registro",
+        "donation": "Donación"
+    },
+    "MISSION": {
+        "missionTitle": "MISIÓN:",
+        "missionBody": "Desarrollar y fortalecer el manejo de habilidades socioafectivas de los padres de familia de tal manera que les permitan participar activamente en el desarrollo integral de sus hijos, coadyuvando con el sector educativo en la conformación de espacios armónicos y libres de violencia"
+    },
+    "VISION": {
+        "visionTitle": "VISIÓN:",
+        "visionBody": "Conformar una red de apoyo entre los padres de familia capaz de generar acciones que fortalezcan el desarrollo integral y pacífico de sus comunidades."
+    },
+    "VALUES": {
+        "valuesTitle": "VALORES:",
+        "valuesBody": {
+            "love": "Amor",
+            "respect": "Respeto",
+            "responsibility": "Responsabilidad",
+            "honesty": "Honestidad"
+        }
+    }
+}
