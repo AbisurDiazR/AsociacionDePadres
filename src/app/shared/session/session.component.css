@@ -1,0 +1,8 @@
+.ap-session-container {
+    height: 450px;
+}
+
+.ap-session-title {
+    display: flex;
+    justify-content: center;
+}

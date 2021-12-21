@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+.ap-carrousel-container {
+    padding: 25px 35px;
+    height: 450px;
+}
+
+.carousel-inner {
+    height: 450px !important;
+}
+
+.ap-icon-size {
+    margin: 0px 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.modal-content {
+    height: 650px;
+}

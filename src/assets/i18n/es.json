@@ -23,5 +23,14 @@
             "responsibility": "Responsabilidad",
             "honesty": "Honestidad"
         }
+    },
+    "SESSION": {
+        "sessionManager": "Manejo de sesión",
+        "login": "Acceder",
+        "email": "Dirección de correo",
+        "password": "Contraseña",
+        "nickname": "Nickname",
+        "schoolarGrade": "Nivel de estudios",
+        "fullName": "Nombre completo"
     }
 }

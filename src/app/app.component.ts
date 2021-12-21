@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'AsociacionDePadres';
 
   constructor(
@@ -14,5 +14,8 @@ export class AppComponent {
   ){
     this._translate.setDefaultLang('es');
     this._translate.use('es');
+  }
+  ngOnInit(): void {
+    console.log(localStorage.getItem('uid'));
   }
 }

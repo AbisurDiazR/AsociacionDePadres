@@ -36,9 +36,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{'NAVBAR.login' | translate}}</a>
+                    <a class="nav-link" style="cursor: pointer;" (click)="open(mymodal)">{{'NAVBAR.login' | translate}}</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<ng-template #mymodal let-modal>
+    <app-session></app-session>
+</ng-template>

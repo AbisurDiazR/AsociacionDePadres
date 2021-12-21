@@ -1,0 +1,62 @@
+<div class="ap-session-container">
+    <div class="ap-session-title">
+        <p class="fs-3 fw-bold">{{'SESSION.sessionManager' | translate}}</p>
+    </div>
+    <!-- Nav Tabs -->
+    <mdb-tabset #staticTabs [buttonClass]="'md-tabs tabs-3'" [contentClass]="'card'">
+        <!--Panel 1-->
+        <mdb-tab heading="{{'SESSION.login' | translate}}">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <form [formGroup]="newUserForm">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">{{'SESSION.email' | translate}}</label>
+                            <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">{{'SESSION.password' | translate}}</label>
+                            <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button (click)="login()" type="submit" class="btn btn-primary">{{'SESSION.login' | translate}}</button>
+                    </form>
+                </div>
+            </div>
+        </mdb-tab>
+        <!--Panel 2-->
+        <mdb-tab heading="{{'NAVBAR.register' | translate}}">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <form [formGroup]="userForm">
+                        <div class="mb-3">
+                            <label for="userFullname" class="form-label">{{'SESSION.fullName' | translate}}</label>
+                            <input type="text" id="userFullname" class="form-control" formControlName="fullName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nickname" class="form-label">{{'SESSION.nickname' | translate}}</label>
+                            <input type="text" id="nickname" class="form-control" formControlName="nickname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">{{'SESSION.email' | translate}}</label>
+                            <input type="text" id="email" class="form-control" formControlName="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">{{'SESSION.password' | translate}}</label>
+                            <input type="password" id="password" class="form-control" formControlName="password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="schoolarGrade" class="form-label">{{'SESSION.schoolarGrade' | translate}}</label>
+                            <select id="schoolarGrade" formControlName="grade" class="form-select">
+                                <option *ngFor="let schoolarGrade of schoolarGrades" value="{{schoolarGrade.name}}">
+                                    {{schoolarGrade.name}}
+                                </option>
+                              </select>
+                        </div>
+                        <button (click)="register()" type="submit" class="btn btn-primary">{{'NAVBAR.register' | translate}}</button>
+                    </form>
+                </div>
+            </div>
+        </mdb-tab>
+    </mdb-tabset>
+</div>

@@ -1,0 +1,21 @@
+.ap-mission-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.ap-mission-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 700px;
+}
+
+.ap-icon-size {
+    margin: 0px 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.ap-text-icon {
+    display: flex;
+}
