@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 import { ToastService } from 'src/app/service/toast.service';
 import { SCHOOLAR_GRADES } from '../data';
@@ -19,7 +20,8 @@ export class SessionComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _login: AuthService,
-    private _toastService: ToastService
+    private _toastService: ToastService,
+    private _navigation: Router
   ) { 
     this.newUserForm = this._fb.group({
       email: new FormControl('', [Validators.required]),
@@ -65,6 +67,10 @@ export class SessionComponent implements OnInit {
         throw reason;
       });
     }
+  }
+
+  public goToRestorePassword(value: any){
+    this._navigation.navigate([`inicio/${value}`]);
   }
 
 }

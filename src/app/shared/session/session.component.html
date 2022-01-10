@@ -18,7 +18,10 @@
                             <label for="exampleInputPassword1" class="form-label">{{'SESSION.password' | translate}}</label>
                             <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <button (click)="login()" type="submit" class="btn btn-primary">{{'SESSION.login' | translate}}</button>
+                        <div class="ap-session-restore-password">
+                            <button (click)="login()" type="submit" class="btn btn-primary">{{'SESSION.login' | translate}}</button>
+                            <p (click)="goToRestorePassword('forget-password')" class="ap-session-text-link">{{'SESSION.forgotPassword' | translate}}</p>
+                        </div>
                     </form>
                 </div>
             </div>

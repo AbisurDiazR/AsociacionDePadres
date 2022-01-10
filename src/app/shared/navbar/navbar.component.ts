@@ -7,17 +7,17 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public registers: string[] = [
-    'Escuelas',
-    'Comites',
-    'Asesoria',
-    'Talleres/Programas',
-    'Solicitudes de apoyo',
+  public registers: any[] = [
+    {name: 'Escuelas', route: 'registro/escuela'},
+    {name: 'Comites', route: 'registro/comite'},
+    {name: 'Asesoria', route: 'registro/asesoria'},
+    {name: 'Talleres/Programas', route: 'registro/taller'},
+    {name: 'Solicitudes de apoyo', route: 'registro/solicitud'}
   ];
 
-  public donations: string[] = [
-    'Paypal',
-    'productos'
+  public donations: any[] = [
+    {name: 'Paypal', route: 'donacion/paypal'},
+    {name: 'Productos', route: 'donacion/productos'}
   ];
 
   public closeResult!: string;

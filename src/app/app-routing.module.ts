@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'nosotros',
     loadChildren: () => import('src/app/about-us/about-us.module').then(m => m.AboutUsModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('src/app/registro/registro.module').then(m => m.RegistroModule)
+  },
+  {
+    path: 'donacion',
+    loadChildren: () => import('src/app/donacion/donacion.module').then(m => m.DonacionModule)
   }
 ];
 

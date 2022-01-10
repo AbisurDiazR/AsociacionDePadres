@@ -21,7 +21,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li *ngFor="let register of registers">
-                            <a class="dropdown-item" href="#">{{register}}</a>
+                            <a class="dropdown-item" href="{{register.route}}">{{register.name}}</a>
                         </li>
                     </ul>
                 </li>
@@ -31,7 +31,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li *ngFor="let donation of donations">
-                            <a class="dropdown-item" href="#">{{donation}}</a>
+                            <a class="dropdown-item" href="{{donation.route}}">{{donation.name}}</a>
                         </li>
                     </ul>
                 </li>

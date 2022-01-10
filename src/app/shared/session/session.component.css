@@ -6,3 +6,15 @@
     display: flex;
     justify-content: center;
 }
+
+.ap-session-restore-password {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ap-session-text-link {
+    margin: auto;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer
+}

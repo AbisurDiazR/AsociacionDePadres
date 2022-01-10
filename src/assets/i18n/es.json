@@ -31,6 +31,32 @@
         "password": "Contraseña",
         "nickname": "Nickname",
         "schoolarGrade": "Nivel de estudios",
-        "fullName": "Nombre completo"
+        "fullName": "Nombre completo",
+        "forgotPassword": "¿Olvido su contraseña?"
+    },
+    "RESTORE": {
+        "oldPassword": "Contraseña anterior",
+        "newPassword": "Nueva contraseña",
+        "confirmPassword": "Confirmar contraseña",
+        "changePassword": "Cambiar contraseña"
+    },
+    "REGISTER": {
+        "asesory": "Asesoria",
+        "asesoryData": "Datos de asesoria",
+        "buttonRegister": "Registrar",
+        "taller": "Taller/Programa",
+        "tallerData": "Datos de taller",
+        "request": "Solicitudes de apoyo",
+        "requestData": "Datos de la solicitud",
+        "school": "Escuela",
+        "schoolData": "Datos de la escuela",
+        "comite": "Comite",
+        "comiteData": "Datos del Comite"
+    },
+    "DONATION": {
+        "paypal": "Paypal",
+        "paypalData": "Datos de paypal",
+        "products": "Productos",
+        "productsData": "Datos del producto"
     }
 }
