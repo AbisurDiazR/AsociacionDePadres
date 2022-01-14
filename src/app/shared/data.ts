@@ -10,3 +10,4 @@ export const SCHOOLAR_GRADES = [
     { key: '08', name: 'Profesional' },
     { key: '09', name: 'Maestría o doctorado' }
 ];
+export const PHONE_REGEX = /[0-9]{10,10}$/

@@ -19,12 +19,19 @@ export function HttpLoaderFactory(http: HttpClient): any{
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RegistroEscuelaComponent } from './registro-escuela/registro-escuela.component';
+import { RegistroComiteComponent } from './registro-comite/registro-comite.component';
+
 
 @NgModule({
   declarations: [
     NavbarComponent,
     CarrouselComponent,
-    SessionComponent
+    SessionComponent,
+    RegistroEscuelaComponent,
+    RegistroComiteComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +48,9 @@ export function HttpLoaderFactory(http: HttpClient): any{
     WavesModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatDialogModule,
+    MatSnackBarModule
   ],
   exports: [
     NavbarComponent,
@@ -53,7 +62,9 @@ export function HttpLoaderFactory(http: HttpClient): any{
     WavesModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule
+    ToastrModule,
+    MatDialogModule,
+    MatSnackBarModule
   ]
 })
 export class SharedModule { }

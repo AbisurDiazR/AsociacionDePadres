@@ -1,0 +1,27 @@
+<form [formGroup]="escuelaForm">
+    <div class="form-group">
+        <label for="nombreUsuario">Nombre de usuario</label>
+        <input formControlName="usuario" type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese el nombre de la escuela">
+        <small *ngIf="escuelaForm.controls.usuario.hasError('required')" class="form-text text-muted">Este campo es obligatorio</small>
+    </div>
+    <div class="form-group">
+        <label for="nombreEscuela">Nombre de la escuela</label>
+        <input formControlName="nombre" type="text" class="form-control" id="nombreEscuela" placeholder="Ingrese el nombre de la escuela">
+        <small *ngIf="escuelaForm.controls.nombre.hasError('required')" class="form-text text-muted">Este campo es obligatorio</small>
+    </div>
+    <div class="form-group">
+        <label for="telefonoEscuela">Telefono de la escuela</label>
+        <input formControlName="telefono" type="text" class="form-control" id="telefonoEscuela" placeholder="Ingrese el número de telefono" maxlength="10">
+        <small *ngIf="escuelaForm.controls.telefono.hasError('pattern')" class="form-text text-muted">Formato de telefono incorrecto</small>
+        <small *ngIf="escuelaForm.controls.telefono.hasError('minLength')" class="form-text text-muted">Longitud de telefono incorrecto</small>
+    </div>
+    <div class="form-group">
+        <label for="correoEscuela">Correo de la escuela</label>
+        <input formControlName="correo" type="email" class="form-control" id="correoEscuela" aria-describedby="emailHelp" placeholder="Ingrese el correo">
+        <small *ngIf="escuelaForm.controls.correo.hasError('required')" class="form-text text-muted">Este campo es obligatorio</small>
+    </div>
+    <div class="ap-re-button-container">
+        <button (click)="createEscuela()" class="btn btn-primary">Registrar</button>
+        <button (click)="cancel()" class="btn btn-danger">Cancelar</button>
+    </div>
+</form>

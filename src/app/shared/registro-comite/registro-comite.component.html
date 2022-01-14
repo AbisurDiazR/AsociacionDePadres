@@ -1,0 +1,38 @@
+<form [formGroup]="comiteForm">
+    <div class="form-group">
+        <label for="nombreUsuario">Nombre de usuario</label>
+        <input formControlName="usuario" type="text" class="form-control" id="nombreUsuario" placeholder="Ingrese el nombre de la comite">
+        <small *ngIf="comiteForm.controls.usuario.hasError('required')" class="form-text text-muted">Este campo es
+            obligatorio</small>
+    </div>
+    <div class="form-group">
+        <label for="nombreComite">Nombre de la comite</label>
+        <input formControlName="nombre" type="text" class="form-control" id="nombrecomite" placeholder="Ingrese el nombre de la comite">
+        <small *ngIf="comiteForm.controls.nombre.hasError('required')" class="form-text text-muted">Este campo es
+            obligatorio</small>
+    </div>
+    <div class="form-group">
+        <label for="telefonoComite">Telefono de la comite</label>
+        <input formControlName="telefono" type="text" class="form-control" id="telefonocomite" placeholder="Ingrese el número de telefono" maxlength="10">
+        <small *ngIf="comiteForm.controls.telefono.hasError('pattern')" class="form-text text-muted">Formato de telefono
+            incorrecto</small>
+        <small *ngIf="comiteForm.controls.telefono.hasError('minLength')" class="form-text text-muted">Longitud de
+            telefono incorrecto</small>
+    </div>
+    <div class="form-group">
+        <label for="escuelaComite">Seleccione una escuela</label>
+        <select id="escuelaComite" formControlName="escuela" class="form-control">
+            <option *ngFor="let escuela of escuelas" (click)="setComiteEscuela(escuela)">{{escuela.nombre}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="correoComite">Correo de la comite</label>
+        <input formControlName="correo" type="email" class="form-control" id="correocomite" aria-describedby="emailHelp" placeholder="Ingrese el correo">
+        <small *ngIf="comiteForm.controls.correo.hasError('required')" class="form-text text-muted">Este campo es
+            obligatorio</small>
+    </div>
+    <div class="ap-re-button-container">
+        <button (click)="createcomite()" class="btn btn-primary">Registrar</button>
+        <button (click)="cancel()" class="btn btn-danger">Cancelar</button>
+    </div>
+</form>
